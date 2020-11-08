@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Todo App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/c56d76baa9.js"></script>
+</head>
+
+<body>
+    <div class="main-container" id="blur">
+        <div class="flex-row">
+            <p class="heading-bold">Tasks <span class="heading-thin">List</span></p>
+            <p class='btn' onclick="toggle()"><i class="fa fa-plus-circle"></i> <span class='addItem'>Add Item</span>
+            </p>
+        </div>
+        <div class="flex-row-list">
+        </div>
+        <div id='noTodo'>No Items in the todo list</div>
+    </div>
+
+    <div class="main-container" id="blur-2">
+        <div class="flex-row">
+            <p class='back' onclick="goBack()"><i class="fa fa-chevron-circle-left"></i> Back</p>
+            <p class="heading-bold" id='currentHeading'>Trip to Paris</p>
+            <p class='btn' onclick="toggle()"><i class="fa fa-plus-circle"></i></p>
+        </div>
+        <div class="flex-row-center">
+            <div class="card-2">
+                <p class="card-heading" id='currentHeading-1'>Trip To Paris</p>
+                <ul id='singleList' style="list-style-type:none;">
+                </ul>
+                <div class='footer-2'>
+                    <button class='btn-completed' onclick="removeToDo(this)"><i class="fa fa-trash"
+                            aria-hidden="true"></i></button>
+                    <p class='btn-add' onclick="toggleAddItem(this)"><i class="fa fa-plus-circle"></i></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex-column popup" id="pop">
+        <div>
+            <p class="popup-text">Add New List</p>
+        </div>
+        <div>
+            <input type="text" id='listHeading' placeholder="Add New List">
+        </div>
+        <div>
+            <button onclick="addTodo()">Add</button>
+            <button onclick="toggle()">Close</button>
+        </div>
+    </div>
+
+    <div class="flex-column popup" id="popAddItem">
+        <div>
+            <p class="popup-text">Add New Item</p>
+        </div>
+        <div>
+            <input type="text" id='subListHeading' placeholder="Add New Item">
+        </div>
+        <div>
+            <button onclick="addSubTodo()">Add</button>
+            <button onclick="toggleAddItem()">Close</button>
+        </div>
+    </div>
+    <script src="js/index.js" type="text/javascript"></script>
+</body>
+
+</html>

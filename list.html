@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Todo App | List</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/main.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+        <script src="https://use.fontawesome.com/c56d76baa9.js"></script>       
+    </head>
+    <body>
+        <div class="main-container" id="blur">
+            <div class="flex-row">
+                    <p><i class="fa fa-chevron-circle-left" ></i> Back</p>
+                    <p class="heading-bold" id='currentHeading'>Trip to Paris</p>
+                    <p class='btn' onclick="toggle()"><i class="fa fa-plus-circle"></i> Add Item</p>
+            </div>
+            <div class="flex-row-center">
+                <div class="list-card">
+                    <p class="card-heading" id='currentHeading-1'>Trip To Paris</p>
+                    <ul style="list-style-type:none;">
+                    </ul>  
+                    <div class='footer'>
+                        <button class='btn-completed' onclick="removeToDo(this)"><i class="fa fa-trash" aria-hidden="true"></i></button> 
+                        <p class = 'btn-add' onclick="toggleAddItem(this)"><i class="fa fa-plus-circle"></i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex-column popup" id="pop">
+                <div>
+                    <p class="popup-text">Add New Todo</p>
+                </div>
+                <div>
+                    <input type="text" placeholder="Add New List">
+                </div>
+                <div>
+                    <button>Add</button>
+                    <button onclick="toggle()">Close</button>
+                </div>
+            </div>
+            <script src="js/index.js" type="text/javascript"></script>
+    </body>
+</html>
